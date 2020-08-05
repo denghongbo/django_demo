@@ -33,8 +33,9 @@ INSTALLED_APPS = [
     'procedure.apps.ProcedureConfig',
     'device_data.apps.DeviceDataConfig',
     'crud.apps.CrudConfig',
-    'material.admin',
-    'material.admin.default',
+    'django.contrib.admin',
+    #'material.admin',
+    #'material.admin.default',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -106,7 +107,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'zh-Hans'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
