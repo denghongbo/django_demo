@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'device_data.apps.DeviceDataConfig',
     'crud.apps.CrudConfig',
+    #'django.contrib.admin',
     'material.admin',
     'material.admin.default',
     'django.contrib.auth',
