@@ -23,6 +23,7 @@ admin.site.index_title = "INDEX TITLE admin.site.index_title"
 admin.empty_value_display = '**Empty**'
 
 urlpatterns = [
+    path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
     path('crud/',  include('crud.urls')),
     path('device-data/', include('device_data.urls'))
