@@ -26,5 +26,6 @@ urlpatterns = [
     path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
     path('crud/',  include('crud.urls')),
-    path('device-data/', include('device_data.urls'))
+    path('device-data/', include('device_data.urls')),
+    path('', include('index.urls'))
 ]
