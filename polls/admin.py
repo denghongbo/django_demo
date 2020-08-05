@@ -7,6 +7,10 @@ class ChoiceInline(admin.TabularInline):
     extra = 3
 
 
+class ChoiceAdmin(admin.ModelAdmin):
+    list_per_page = 15
+
+
 class QuestionAdmin(admin.ModelAdmin):
     list_display = ('question_text', 'pub_date', 'was_published_recently')
     list_per_page = 10
@@ -15,10 +19,6 @@ class QuestionAdmin(admin.ModelAdmin):
         ('Date information', {'fields': ['pub_date']}),
     ]
     inlines = [ChoiceInline]
-
-
-class ChoiceAdmin(admin.ModelAdmin):
-    list_per_page = 15
 
 
 admin.site.register(Question, QuestionAdmin)
