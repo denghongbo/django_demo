@@ -29,9 +29,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'procedure.apps.ProcedureConfig',
     'device_data.apps.DeviceDataConfig',
     'crud.apps.CrudConfig',
-    #'django.contrib.admin',
     'material.admin',
     'material.admin.default',
     'django.contrib.auth',
