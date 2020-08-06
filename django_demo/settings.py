@@ -29,6 +29,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'index.apps.IndexConfig',
     'polls.apps.PollsConfig',
     'procedure.apps.ProcedureConfig',
     'device_data.apps.DeviceDataConfig',
