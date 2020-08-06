@@ -10,6 +10,9 @@ class Demo(models.Model):
 
 
 class Person(models.Model):
+    """
+    get_shirt_size_display()
+    """
     SHIRT_SIZE = (
         ('S', 'Small'),
         ('M', 'Medium'),
@@ -17,3 +20,12 @@ class Person(models.Model):
     )
     name = models.CharField(max_length=60)
     shirt_size = models.CharField(max_length=1, choices=SHIRT_SIZE)
+
+    def __str__(self):
+        return self.name
+
+
+class Person2(models.Model):
+    name = models.CharField("Person's name",
+                            max_length=60,
+                            help_text="Please input a name")

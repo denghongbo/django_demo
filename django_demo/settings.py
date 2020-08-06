@@ -29,6 +29,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'tb.apps.TbConfig',
     'index.apps.IndexConfig',
     'polls.apps.PollsConfig',
     'procedure.apps.ProcedureConfig',
