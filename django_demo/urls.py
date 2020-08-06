@@ -27,5 +27,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('crud/',  include('crud.urls')),
     path('device-data/', include('device_data.urls')),
-    path('', include('index.urls'))
+    path('', include('index.urls')),
+    path('tb/', include('tb.urls'))
 ]
