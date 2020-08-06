@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import Question, Choice
-
+from django import forms
 
 class ChoiceInline(admin.TabularInline):
     model = Choice
@@ -14,11 +14,19 @@ def votes_set_one(modeladmin, request, queryset):
 votes_set_one.short_description = "Set Votes To One"
 
 
+class ChoiceForm(forms.ModelForm):
+    choice_text = forms.CharField(widget=forms.Textarea(attrs={
+        'rows': 15,
+        'cols': 100,
+        'style': 'height: auto',
+    }))
+
+
 class ChoiceAdmin(admin.ModelAdmin):
     list_per_page = 15
     list_display = ('choice_text', 'votes')
-
     actions = [votes_set_one]
+    form = ChoiceForm
 
 
 class QuestionAdmin(admin.ModelAdmin):
