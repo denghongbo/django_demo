@@ -1,6 +1,8 @@
 from django.http import HttpResponse
+from django.core import serializers
 
 
 def index(request):
-    return HttpResponse("TODO")
+    data = 'todo'
+    return HttpResponse(data)
 
