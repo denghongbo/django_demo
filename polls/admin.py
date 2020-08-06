@@ -18,7 +18,7 @@ class ChoiceForm(forms.ModelForm):
     choice_text = forms.CharField(widget=forms.Textarea(attrs={
         'rows': 15,
         'cols': 100,
-        'style': 'height: auto',
+        'class': 'materialize-textarea',
     }))
 
 
