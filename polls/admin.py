@@ -7,15 +7,25 @@ class ChoiceInline(admin.TabularInline):
     extra = 3
 
 
+def votes_set_one(modeladmin, request, queryset):
+    queryset.update(votes='1')
+
+
+votes_set_one.short_description = "Set Votes To One"
+
+
 class ChoiceAdmin(admin.ModelAdmin):
     list_per_page = 15
+    list_display = ('choice_text', 'votes')
+
+    actions = [votes_set_one]
 
 
 class QuestionAdmin(admin.ModelAdmin):
     list_display = ('question_text', 'pub_date', 'was_published_recently')
     list_per_page = 10
     fieldsets = [
-        (None,               {'fields': ['question_text']}),
+        (None, {'fields': ['question_text']}),
         ('Date information', {'fields': ['pub_date']}),
     ]
     inlines = [ChoiceInline]
@@ -23,4 +33,3 @@ class QuestionAdmin(admin.ModelAdmin):
 
 admin.site.register(Question, QuestionAdmin)
 admin.site.register(Choice, ChoiceAdmin)
-
