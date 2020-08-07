@@ -1,9 +1,13 @@
-<h1>hello tp template</h1>
-<ul>
-    {% for blog in blogs %}
-        <li>
-            <h3>{{ blog.title }}</h3>
-            <p>{{ blog.content }}</p>
-        </li>
-    {% endfor %}
-</ul>
+{% extends "layout/main.html" %}
+{% block content %}
+    <ul>
+        {% for blog in blogs %}
+            <li>
+                <h5>{{ blog.title }}</h5>
+                <article>
+                    {{ blog.content }}
+                </article>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
