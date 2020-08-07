@@ -1,0 +1,9 @@
+<h1>hello tp template</h1>
+<ul>
+    {% for blog in blogs %}
+        <li>
+            <h3>{{ blog.title }}</h3>
+            <p>{{ blog.content }}</p>
+        </li>
+    {% endfor %}
+</ul>
