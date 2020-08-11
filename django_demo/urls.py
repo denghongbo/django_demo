@@ -25,8 +25,9 @@ admin.empty_value_display = '**Empty**'
 urlpatterns = [
     path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
-    path('crud/',  include('crud.urls')),
+    path('crud/', include('crud.urls')),
     path('device-data/', include('device_data.urls')),
     path('', include('index.urls')),
-    path('tb/', include('tb.urls'))
+    path('tb/', include('tb.urls')),
+    path('tp/', include('tp.urls')),
 ]

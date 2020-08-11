@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My amazing site</title>
+</head>
+
+<body>
+    <div id="sidebar">
+        {% block sidebar %}
+            <h1>Side bar</h1>
+        {% endblock %}
+    </div>
+
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
