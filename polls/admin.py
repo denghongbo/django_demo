@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Question, Choice
 from django import forms
+from ajax_select.fields import AutoCompleteSelectField
 
 
 class ChoiceInline(admin.TabularInline):
@@ -21,6 +22,7 @@ class ChoiceForm(forms.ModelForm):
         'cols': 100,
         'class': 'materialize-textarea',
     }))
+    question = AutoCompleteSelectField('questions')
 
 
 class ChoiceAdmin(admin.ModelAdmin):

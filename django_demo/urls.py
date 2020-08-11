@@ -28,6 +28,7 @@ urlpatterns = [
     path('crud/', include('crud.urls')),
     path('device-data/', include('device_data.urls')),
     path('', include('index.urls')),
+    path('', include('ajax_select.urls')),
     path('tb/', include('tb.urls')),
     path('tp/', include('tp.urls')),
 ]
