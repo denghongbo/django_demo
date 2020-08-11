@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import Question, Choice
 from django import forms
 
+
 class ChoiceInline(admin.TabularInline):
     model = Choice
     extra = 3
