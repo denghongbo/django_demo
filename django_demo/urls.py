@@ -16,10 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-admin.site.site_header = "SITE HEADER admin.site.site_header"
-admin.site.site_title = "SITE TITLE admin.site.site_title"
+admin.site.site_header = "管理系统"
+admin.site.site_title = "管理系统"
 admin.site.site_url = "localhost:8000"
-admin.site.index_title = "INDEX TITLE admin.site.index_title"
+admin.site.index_title = None
 admin.empty_value_display = '**Empty**'
 
 urlpatterns = [

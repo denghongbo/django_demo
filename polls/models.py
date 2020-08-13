@@ -29,3 +29,7 @@ class Choice(models.Model):
     def __str__(self):
         return self.choice_text
 
+    class Meta:
+        verbose_name = "选项"
+        verbose_name_plural = verbose_name
+
